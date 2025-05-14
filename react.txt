@@ -1,9 +1,79 @@
-- React é uma biblioteca focada em criação de interfaces gráficas (UI), e não resolve coisas como roteamento, validação de formulários, requisições HTTP, internacionalização.
+* Panorama sobre o React:
+    - React é uma biblioteca focada em criação de interfaces gráficas (UI), e não resolve coisas como roteamento, validação de formulários, requisições HTTP, internacionalização.
 
-- O React utiliza HTML, CSS e JS para manipulação de DOM.
+    - O React utiliza HTML, CSS e JS para manipulação de DOM.
 
-- O React não é autosuficiente, ele precisa de outras bibliotecas para construir aplicações completas, como React Router, Zod, React Hook Form, entre outras.
+    - O React não é autosuficiente, ele precisa de outras bibliotecas para construir aplicações completas, como React Router, Zod, React Hook Form, entre outras.
 
-- O core do React pode ser usado para aplicativos mobile (React Native), terminais (Ink), entre outros.
+    - O core do React pode ser usado para aplicativos mobile (React Native), terminais (Ink), entre outros.
+
+    - Uma biblioteca para criar interfaces declarativas. Você descreve como a UI deve ser com no estado, e o React gerencia as mudanças no DOM.
+
+    - No React, a maior parte do código é dívidido em componentes reutilizáveis e isolados.
+
+    - É Reativo, isso significa que o React atualizada a interface automaticamente quando o estado muda.
+
+    - Unidirecional no fluxo de dados, o estado flui de cima para baixo (de pai para filho), isso facilita o controle da aplicação.
+
+    - Usa uma representação virtual do DOM para fazer atualizações eficientes.
+
+* Tipos de aplicações web:
+    - SPA => Single Page Application:
+        - É uma aplicação web que carrega uma única página HTML e atualiza o conteúdo dinamicamente.
+        - O navegador carrega um HTML básico junto com todos os arquivos de JavaScript e CSS.
+        - Pode ser hospedada em qualquer CDN.
+
+    - SSR => Server Side Rendering:
+        - É uma aplicação web que carrega uma única página HTML e atualiza o conteúdo dinamicamente.
+        - O navegador carrega um HTML básico junto com todos os arquivos de JavaScript e CSS.
+        - A diferença é que SSR necessita de um servidor NodeJS para hospedar a aplicação.
+
+* JS DOM vs React Virtual DOM:
+    - DOM => Document Object Model:
+        - é a estrutura de árvore que os navegadores criam para representar o HTML da página no lado do JavaScript.
+    
+    - Virtual DOM:
+        - é uma cópia leve do DOM real, mantida em memória pelo React.
+        - quando há mudanças no estado, o React atualiza primeiro o Virtual DOM e compara com a versão anterior (processo chamado "Diffing"), e aplica apenas as mudanças necessárias no DOM Real (processo chamado "Reconciliation"), isso otimiza muita a performance da aplicação.
+        - em outras palavras, o Virtual DOM é como um "rascunho" eficiente do DOM Real, e permite atualizações mais rápidas e menos processamento pesado.
+
+* Árvore de Renderização:
+    - conhecida como "Render Tree", ela é usada pelo navegador para desenhar os elementos na tela, após toda a parte de Diffing e Reconciliation já finalizada.
+    - essa estrutura permite que dados sejam enviados de cima para baixo, de componentes pai - para componentes filho.
+    - vale lembrar que todo esse processo é feito automaticamente pelo React.
+
+* Componentização e Reutilização:
+    -  o react permite que você crie interfaces em pedaços individuais, chamados de Componentes.
+    - esses componentes podem ser reutilizados e compostos para formar interfaces mais complexas de maneira modular e organizada.
+    - cada componente encapsula sua própria lógica e UI, tornando o código mais manutenível e reutilizável.
+    - em sua maioria são baseados em Funções JavaScript, mas pode acontecer de em projetos legados você encontrar Classes.
+
+    * Um dos principais recursos da biblioteca é a comunicação entre componentes por meio de:
+        - Propriedades => dados passados de pai para filho.
+        - Contextos => dados compartilhados de forma global na aplicação.
+
+* Formas de rodar o React:
+    * Via tag <script>:
+        - maneira mais simples, somente até versão 18.
+        - pode ser via CDN ou ter o código do React em arquivo local.
+        - ótimo para estudos, projetos de página única e resoluções rápidas.
+        - você cria tudo em um arquivo HTML e já funciona.
+        - são necessários três arquivos para rodar:
+            - React JavaScript
+            - React DOM
+            - Babel
+
+    * Via Bundler:
+        - são ferramentas de construção de aplicações React
+        - uma dos principais bundlers é o "VITE"
+        - tem como principal foco aplicações SPA.
+        - é extremamente rápido para compilar o projeto.
+        - utilizado amplamente no mundo todo.
+
+
+
+
+
+
 
 
