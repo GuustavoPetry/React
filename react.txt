@@ -115,6 +115,12 @@
             );
             * OBS: tag vazia <> é igual <React.Fragment>
 
+* Como o código é convertido na prática:
+    - a conversão de JSX para JavaScript é feita através do "Babel".
+    - O Babel é um "transpilador" de JavaScript.
+
+    * Site para testes => www.babeljs.io/repl
+
 
 
 
