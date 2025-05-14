@@ -1,0 +1,9 @@
+- React é uma biblioteca focada em criação de interfaces gráficas (UI), e não resolve coisas como roteamento, validação de formulários, requisições HTTP, internacionalização.
+
+- O React utiliza HTML, CSS e JS para manipulação de DOM.
+
+- O React não é autosuficiente, ele precisa de outras bibliotecas para construir aplicações completas, como React Router, Zod, React Hook Form, entre outras.
+
+- O core do React pode ser usado para aplicativos mobile (React Native), terminais (Ink), entre outros.
+
+
