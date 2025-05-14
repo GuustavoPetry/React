@@ -121,6 +121,62 @@
 
     * Site para testes => www.babeljs.io/repl
 
+* Formas de utilizar CSS no React:
+    * CSS interno (inline):
+        <div style={{ backgroundColor: "lightblue", padding: "20px" }}>
+            Fundo de tela Azul
+        </div>
+
+    * CSS externo:
+        - cria um arquivo .css comum e importa no arquivo JavaScript
+
+    * CSS Modules:
+        - parecido com o CSS externo, porém ele cria Classe no arquivo styles.module.css que são transformadas em variáveis JavaScript.
+
+        * Exemplo:
+            import styles from "./styles.module.css";
+
+            export default function App() {
+                return <div className={styles.container}> Fundo de tela Azul </div>;
+            }
+
+    * CSS-in-JS:
+        - diretamente no JavaScript criando elementos
+
+        * Exemplo:
+            import styled from "styled-components";
+
+            const Container = styled.div´
+                background-color: lightblue;
+                padding: 20px;
+            ´;
+
+            export default function App() {
+                return <Container> Fundo de tela Azul </Container>;
+            }
+
+    * TailWindCSS:
+        - importa a biblioteca TailWindCSS e utiliza as classes prontas da biblioteca diretamente no "className".
+
+        * para importar TailWindCSS:
+            <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+        * Plugin VSCode útil => Tailwind CSS IntelliSense
+
+* Componentes no React:
+    - um componente React é como se fosse uma tag HTML personalizada, criada do seu jeito.
+    - o componente abre e fecha uma tag, e essas tags precisam obrigatoriamente começar com a primeira letra em caixa alta.
+    - o componente precisa obrigatoriamente retornar algo, seja um HTML ou 'null'.
+    - pode ser reutilizado em diferentes partes da aplicação.
+    - recebe estilização através das propriedades 'style' ou 'className'.
+    - pode ser atômico onde não há muita lógica funcional, ou com mais inteligência integrada nele.
+
+    * Estrutura básica:
+        function Button() {
+            return (
+                <button> Botão </button>
+            )
+        }
 
 
 
