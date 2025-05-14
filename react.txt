@@ -70,7 +70,50 @@
         - é extremamente rápido para compilar o projeto.
         - utilizado amplamente no mundo todo.
 
+* JSX => JavaScript XML:
+    - é uma sintaxe que permite escrever código HTML dentro do JavaScript.
+    - facilita a criação de interfaces via componentes, tornando o código mais intuitivo.
+    - não precisa criar vários arquivos para ter um componente funcional (JS e HTML no mesmo arquivo)
+    
+    * Exemplo:
+     - Com JavaScript puro:
+        return React.createElement('h1', null, 'Olá, mundo!");
 
+    - Com sintaxe JSX:
+        return <h1>Olá, mundo!<h1>;
+
+    - o React sozinho compila JSX para React.createElement().
+    - é uma maneira de criar elementos de forma mais legível (sugar sintax).
+    - em alguns momentos verá a extensão .jsx nos arquivos de componentes, mas ela nem sempre é necessária.
+
+* Fragmentos JSX:
+    - no JSX, a parte escrita do HTML sempre precisa retornar um único elemento pai.
+    - pode ser qualquer elemento HTML, como uma <div> ou qualquer outro.
+    - pode ser uma tag vazia, que é conhecida como Fragmento, ela permite agrupar sem criar elementos adicionais.
+
+    * Exemplo:
+        ❌ isso NÃO funciona:
+            return (
+                <h1>Elemento 1</h1>
+                <p>Elemento 2</p>
+            );
+
+        ✅ usando <div> (mas gera um nó extra no DOM):
+            return(
+                <div>
+                    <h1>Elemento 1</h1>
+                    <p>Elemento 2</p>
+                </div>
+            );
+
+        ✅ usando tag vazia <> (sem gerar nada a mais no DOM):
+            return(
+                <>
+                    <h1>Elemento 1</h1>
+                    <p>Elemento 2</p>
+                <>
+            );
+            * OBS: tag vazia <> é igual <React.Fragment>
 
 
 
