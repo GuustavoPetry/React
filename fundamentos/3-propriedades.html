@@ -21,7 +21,7 @@
             primary: 'bg-purple-500'
         }
 
-        function Button({ variant = 'default', children, className, ...props }) {
+        function Button({ variant = 'default', className, children, ...props }) {
             return (
                 <button 
                     className={
@@ -42,7 +42,7 @@
                     <Button title="Botão" className="mr-14">
                         Meu Botão    
                     </Button>
-                    <Button variant="primary">
+                    <Button variant="primary" className="mr-14">
                         Outro Botão
                     </Button>
                 </main>)
